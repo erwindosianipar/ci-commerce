@@ -7,5 +7,5 @@ Pages: https://erwindoq.github.io/<br/>
 Facebook: https://facebook.com/erwindoq<br/>
 Twitter: https://twitter.com/erwindoqi<br/>
 Instagram : https://www.instagram.com/erwindoq<br/>
-
+<br/>
 <p>Silahkan berkontribusi dan jangan lupa fork hehe :)</p>
