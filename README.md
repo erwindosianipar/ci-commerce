@@ -1,11 +1,12 @@
-<h1>Onlinehop CodeIgniter 3</h1>
+# Onlinehop CodeIgniter 3
 
-<p>CodeIgniter adalah salah satu Framework PHP yang digunakan untuk membuat aplikasi berbasis website dengan framework ini programmer dapat lebih cepat mengerjakan project-project untuk pembuatan sebuah website.</p>
+CodeIgniter adalah salah satu Framework PHP yang digunakan untuk membuat aplikasi berbasis website dengan framework ini programmer dapat lebih cepat mengerjakan project-project untuk pembuatan sebuah website.
 
-<p>Contact Me:</p>
-Pages: https://erwindoq.github.io/<br/>
-Facebook: https://facebook.com/erwindoq<br/>
-Twitter: https://twitter.com/erwindoqi<br/>
-Instagram : https://www.instagram.com/erwindoq<br/>
-<br/>
-<p>Silahkan berkontribusi dan jangan lupa fork hehe :)</p>
+## Contact Me:
+
+1. [Website](https://erwindosianipar.github.io/)
+2. [Facebook](https://facebook.com/erwindoosianipar)
+3. [Twitter](https://twitter.com/erwindosianipar)
+4. [Instagram](https://www.instagram.com/erwindosianipar)
+
+Silahkan berkontribusi atau dikembangkan lebih lanjut :)
