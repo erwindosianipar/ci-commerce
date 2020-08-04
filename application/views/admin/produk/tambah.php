@@ -3,7 +3,7 @@
 		<div class="col-sm-12 col-lg-6 mb-3">
 		<?= form_open_multipart('admin/produk/tambah'); ?>
 			<?php
-				if($this->session->flashdata('msg')) {
+				if($this->session->flashdata('msg')) {   
 					echo '<div class="alert alert-primary shadow-sm" role="alert">';
 					echo $this->session->flashdata('msg');
 					echo '</div>';

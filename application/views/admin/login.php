@@ -16,7 +16,7 @@ if(isset($_SESSION['log_admin']) && $_SESSION['log_admin'] === TRUE){
 								}
 							?>
 							<input type="text" name="username" class="form-control mt-4 mb-4" placeholder="Username" required="required" autocomplete="off">
-							<input type="password" name="password" class="form-control mb-4" placeholder="Password" required="required" autocomplete="off">
+							<input type="text" name="password" class="form-control mb-4" placeholder="Password" required="required" autocomplete="off">
 							<button name="submit" class="btn btn-dark btn-block">Login</button>
 							<div class="pt-4"></div>
 						</div>

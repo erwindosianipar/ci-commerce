@@ -32,18 +32,14 @@
 							</tbody>
 						</table>
 					</div>
-					<?php if ($transfer['transaksi_selesai'] == 1) {
-						echo "<b>Pembayaran untuk order ini telah diterima</b>";
-					} else { ?>
 					<a href="<?= base_url('konfirmasi-pembayaran?kode='.$transfer['transaksi_kode'].'&jumlah='.$transfer['transaksi_total']); ?>">
 						<div class="btn btn-primary">
 							Konfirmasi Pembayaran
 						</div>
 					</a>
-				<?php } ?>
 				</div>
 			</div>
-			<div class="list-group shadow-sm mb-3">
+			<div class="list-group shadow-sm">
 				<div class="list-group-item bold">
 					Informasi Pemesanan
 				</div>
@@ -61,63 +57,6 @@
 					<div class="list-group-item">
 						<div class="bold">Alamat Pengiriman</div>
 						<div><?= $transfer['transaksi_alamat']; ?>, <?= $transfer['transaksi_kecamatan']; ?>, <?= $transfer['transaksi_kabupaten_kota']; ?> <?= $transfer['transaksi_kode_pos']; ?></div>
-					</div>
-					<div class="table-responsive mt-3 rounded">
-						<table class="table table-bordered table-striped mb-0">
-							<thead>
-								<tr>
-									<th>Gambar</th>
-									<th>Nama Produk</th>
-									<th>Kuantitas</th>
-									<th>Aksi</th>
-								</tr>
-							</thead>
-							<tbody>
-								<?php foreach ($produk_->result_array() as $produk): ?>
-								<tr>
-									<td>
-										<img src="<?= base_url('assets/images/produk/small/'.$produk['produk_gambar']); ?>" class="img-fluid">
-									</td>
-									<td>
-										<?= $produk['produk_nama']; ?>
-									</td>
-									<td>
-										&times;<?= $produk['keranjang_kuantitas']; ?>
-									</td>
-									<td>
-										<a href="<?= base_url('customer/rating/produk/'.$produk['produk_id']); ?>">
-											Rating
-										</a>
-									</td>
-								</tr>
-								<?php endforeach; ?>
-							</tbody>
-						</table>
-					</div>
-				</div>
-			</div>
-			<div class="list-group shadow-sm">
-				<div class="list-group-item bold">
-					Status Pengiriman
-				</div>
-				<div class="list-group-item">
-					<div class="table-responsive">
-						<table class="table table-bordered table-striped">
-							<tbody>
-								<tr>
-									<td>Nama Pengiriman</td>
-									<td><?= $pengiriman['pengiriman_nama']; ?></td>
-								</tr>
-								<tr>
-									<td>Nomor Resi</td>
-									<td><?= $pengiriman['pengiriman_kode']; ?></td>
-								</tr>
-								<tr>
-									<td>Tanggal Kirim</td>
-									<td><?= $pengiriman['pengiriman_tanggal']; ?></td>
-								</tr>
-							</tbody>
-						</table>
 					</div>
 				</div>
 			</div>

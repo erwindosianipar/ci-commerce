@@ -24,34 +24,34 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTR" aria-expanded="true" aria-controls="collapseUtilities">
-                    <span>Transaksi</span>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
+                    <span>Kategori Produk</span>
                 </a>
-                <div id="collapseTR" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="<?= base_url('admin/transaksi'); ?>">Transaksi Penjualan</a>
-                        <a class="collapse-item" href="<?= base_url('admin/transaksi/terkonfirmasi'); ?>">Transaksi Terkonfirmasi</a>
+                        <a class="collapse-item" href="<?= base_url('admin/kategori/tambah'); ?>">Tambah Kategori</a>
+                        <a class="collapse-item" href="<?= base_url('admin/kategori'); ?>">Lihat List Kategori</a>
                     </div>
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/kategori/tambah'); ?>">
-                    <span>Kategori Produk</span>
+                <a class="nav-link" href="<?= base_url('admin/transaksi'); ?>">
+                    <span>Transaksi Penjualan</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/laporan/customer'); ?>">
+                <a class="nav-link" href="<?= base_url('admin/pembelian'); ?>">
+                    <span>Histori Pembelian</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('admin/customer'); ?>">
                     <span>Data Customer</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/laporan/penjualan'); ?>">
+                <a class="nav-link" href="<?= base_url('admin/laporan'); ?>">
                     <span>Laporan Penjualan</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('admin/rekening'); ?>">
-                    <span>Nomor Rekening</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -67,7 +67,7 @@
                     <button id="sidebarToggleTop" class="btn d-md-none bg-primary text-white ml-3">
                         <span class="fa fa-bars"></span>
                     </button>
-                    <!--<form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
+                    <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 p-3" placeholder="Cari" aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
@@ -76,7 +76,7 @@
                                 </button>
                             </div>
                         </div>
-                    </form>-->
+                    </form>
 
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown no-arrow d-sm-none">
@@ -105,6 +105,9 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="<?= base_url('admin/profil'); ?>">
+                                    Edit Profil
+                                </a>
                                 <a class="dropdown-item" href="<?= base_url('admin/profil/password'); ?>">
                                     Ganti Password
                                 </a>

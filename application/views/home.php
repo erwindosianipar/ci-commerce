@@ -55,8 +55,7 @@
 		</div>
 	</div>
 
-	<div class="my-5"></div>
-	<!--<div class="row my-4">
+	<div class="row my-4">
 		<div class="col-sm-12 col-lg-12">
 			<div class="card shadow-sm rounded-0">
 			  <div class="card-header bg-white text-uppercase text-danger bold">
@@ -66,7 +65,7 @@
 			  </div>
 			</div>
 		</div>
-	</div>-->
+	</div>
 
 	<div class="row row-p my-2">
 	  	<?php if($produk_->num_rows() < 1): ?>

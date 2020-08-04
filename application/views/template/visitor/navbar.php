@@ -11,16 +11,14 @@
         <div class="collapse navbar-collapse" id="nvc">
             <div class="my-4 d-lg-none"></div>
             <div class="row">
-                <?= form_open('search', array('method' => 'get')) ?>
                 <div class="col-sm-12 col-lg-12">
                     <div class="form-inline input-group">
-                        <input type="text" name="q" class="form-control bg-light no-border" placeholder="Pencarian" aria-label="Pencarian" aria-describedby="basic-addon2" required="required">
+                        <input type="text" class="form-control bg-light no-border" placeholder="Pencarian" aria-label="Pencarian" aria-describedby="basic-addon2">
                         <div class="input-group-append">
                             <button class="btn btn-secondary">Cari</button>
                         </div>
                     </div>
                 </div>
-                <?= form_close(); ?>
             </div>
             <div class="my-3 d-lg-none"></div>
 
