@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'onlineshop',
+	'hostname' => 'sql259.main-hosting.eu',
+	'username' => 'u492825399_cicommerce',
+	'password' => 'j/C*0Lw^8Ow',
+	'database' => 'u492825399_cicommerce',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,

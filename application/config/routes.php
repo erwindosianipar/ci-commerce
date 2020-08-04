@@ -54,8 +54,6 @@ $route['admin/logout'] 			= 'admin/login/logout';
 $route['produk/tambah'] 		= 'produk/tambah';
 $route['produk/(:any)'] 		= 'produk/ambil_produk/$1';
 $route['konfirmasi-pembayaran']	= 'customer/transaksi/konfirmasi_pembayaran';
-$route['kategori/(:any)']		= 'produk/kategori/$1';
-$route['search']				= 'search/search';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

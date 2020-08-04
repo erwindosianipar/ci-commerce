@@ -6,8 +6,8 @@ if(isset($_SESSION['log_customer']) && $_SESSION['log_customer'] === TRUE){
 <div class="container my-5">
 	<div class="row">
 		<div class="col-sm-12 col-lg-8">
-			<div class="card card-body shadow-sm">
-				<h5 class="mb-4 bold">Mendaftar</h5>
+			<div class="card card-body">
+				<h5 class="mb-4">Mendaftar</h5>
 				<?= form_open('auth/register'); ?>
 					<div class="row">
 						<div class="col-sm-12 col-lg-6">

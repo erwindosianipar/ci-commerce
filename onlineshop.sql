@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 13, 2019 at 08:36 AM
+-- Generation Time: May 21, 2019 at 06:03 AM
 -- Server version: 10.1.36-MariaDB
 -- PHP Version: 5.6.38
 
@@ -57,15 +57,6 @@ CREATE TABLE `carousel` (
   `carousel_gambar` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `carousel`
---
-
-INSERT INTO `carousel` (`carousel_id`, `carousel_judul`, `carousel_gambar`) VALUES
-(1, 'Blabla', '1_1558417299_20190521124139_n.png'),
-(2, '-', '1_1558417312_20190521124152_n.jpg'),
-(3, 'Belanja Online Nasional', '1_1560304696_20190612085816_n.jpg');
-
 -- --------------------------------------------------------
 
 --
@@ -96,7 +87,8 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`customer_id`, `nama`, `username`, `email`, `password`, `alamat`, `kecamatan`, `kabupaten_kota`, `provinsi`, `kode_pos`, `gender`, `no_hp`, `gambar`, `aktif`, `tgl_daftar`, `hash`) VALUES
-(3, 'Customer', 'customer', 'customer@gmail.com', '$2y$05$fu5goToE/AJkGlT404U8FOJTQyIlsi.HA4eWz5u8IlS2nHmSb6nOq', 'Medan', 'Medan', 'asd', 'asda', '32834', 1, '08566298835', '', 1, '2019-06-12 18:37:20', '1');
+(1, 'Erwindo Sianipar', 'erwindoq', 'erwindoq@gmail.com', '$2y$05$e.iFYpAUB6nz3YaOdspQx.FOXDNaGU2cWFy7Ab0lTOSbfX4oPo25u', '', '', '', '', '', 0, '', '', 1, '2019-05-19 02:15:35', '1'),
+(2, 'Lamhot Pardamean', 'lamhot', 'lamhot@gmail.com', '$2y$05$r9/cq3EEPhCvyq6nfJ5xZemr2/pWyXDBHPfYdXlEg7h/ETYremtmW', '', '', '', '', '', 0, '', '', 1, '2019-05-19 04:47:34', '1');
 
 -- --------------------------------------------------------
 
@@ -115,8 +107,7 @@ CREATE TABLE `kategori` (
 --
 
 INSERT INTO `kategori` (`kategori_id`, `kategori_nama`, `kategori_slug`) VALUES
-(29, 'Pakaian Pria', 'pakaian-pria-621984'),
-(30, 'Celana Pria', 'celana-pria-816059');
+(29, 'Pakaian Pria', 'pakaian-pria-621984');
 
 -- --------------------------------------------------------
 
@@ -141,14 +132,9 @@ CREATE TABLE `keranjang` (
 --
 
 INSERT INTO `keranjang` (`keranjang_id`, `keranjang_customer_id`, `keranjang_produk_id`, `keranjang_kuantitas`, `keranjang_harga`, `keranjang_tanggal`, `keranjang_kode`, `keranjang_status`, `keranjang_selesai`) VALUES
-(85, 3, 21, 1, 60000, '2019-06-12 20:01:28', 'jhCKIQ', 1, 0),
-(86, 3, 22, 1, 1231, '2019-06-12 20:01:32', 'jhCKIQ', 1, 0),
-(87, 3, 21, 1, 60000, '2019-06-12 20:05:04', 'kI59uz', 1, 0),
-(88, 3, 22, 1, 1231, '2019-06-12 20:05:45', 'G6YyUD', 1, 0),
-(89, 3, 22, 1, 1231, '2019-06-12 20:08:41', 'RU0Awl', 1, 0),
-(90, 3, 22, 1, 1231, '2019-06-12 22:35:06', '31ZXzQ', 1, 0),
-(91, 3, 21, 1, 60000, '2019-06-12 22:40:20', 'YigeAE', 1, 0),
-(92, 3, 21, 1, 60000, '2019-06-13 06:26:21', '7EKqNg', 1, 0);
+(70, 1, 20, 1, 9000, '2019-05-20 15:20:12', 'efHEn7', 1, 0),
+(71, 1, 18, 1, 10000, '2019-05-20 15:20:16', 'efHEn7', 1, 0),
+(72, 1, 20, 1, 9000, '2019-05-20 15:31:39', 'ecpf0K', 1, 0);
 
 -- --------------------------------------------------------
 
@@ -161,29 +147,13 @@ CREATE TABLE `konfirmasi` (
   `konfirmasi_transaksi_kode` varchar(10) NOT NULL,
   `konfirmasi_tanggal` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `konfirmasi_gambar` varchar(100) NOT NULL,
-  `bank` varchar(30) NOT NULL,
   `atas_nama` varchar(40) NOT NULL,
   `rekening_asal` varchar(20) NOT NULL,
   `rekening_tujuan` varchar(20) NOT NULL,
   `jumlah_transfer` int(15) NOT NULL,
-  `catatan` varchar(100) NOT NULL,
   `konfirmasi_status` int(1) NOT NULL DEFAULT '0',
-  `admin_id` int(4) NOT NULL DEFAULT '0'
+  `admin_id` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `konfirmasi`
---
-
-INSERT INTO `konfirmasi` (`konfirmasi_id`, `konfirmasi_transaksi_kode`, `konfirmasi_tanggal`, `konfirmasi_gambar`, `bank`, `atas_nama`, `rekening_asal`, `rekening_tujuan`, `jumlah_transfer`, `catatan`, `konfirmasi_status`, `admin_id`) VALUES
-(14, 'AWOTR4UL-3', '2019-06-12 20:14:13', '3_20190613031413_n.jpg', 'Mandiri', 'Customer', '1239183', 'Mandiri - Rima Arhya', 61231, '', 1, 1),
-(15, 'PYE7A3PW-3', '2019-06-12 20:14:37', '3_20190613031437_n.jpg', 'BRI', 'Customer', '42342', 'Mandiri - Rima Arhya', 1231, '', 1, 1),
-(16, 'WSBJKZIR-3', '2019-06-12 20:14:51', '0.jpg', 'BNI', 'Customer', '3424234', 'Mandiri - Rima Arhya', 1231, '', 1, 1),
-(17, 'CHXJCDGK-3', '2019-06-12 21:47:56', '0.jpg', 'asdasd', 'Customer', '234342342', 'Mandiri - Rima Arhya', 60000, '', 1, 1),
-(18, 'CHXJCDGK-3', '2019-06-12 21:48:46', '0.jpg', 'BNI', 'Customer', '34242', 'Mandiri - Rima Arhya', 60000, '', 1, 1),
-(19, 'DWJGBWYQ-3', '2019-06-12 22:35:42', '0.jpg', 'BI', 'Customer', '8723423', 'Mandiri - Rima Arhya', 1231, '', 1, 1),
-(20, 'DV9SVTJF-3', '2019-06-12 23:22:01', '0.jpg', 'Mandiri', 'Customer', '39823472364', 'Mandiri - Rima Arhya', 60000, '', 1, 1),
-(21, 'QO3MECSA-3', '2019-06-13 06:26:49', '0.jpg', 'Mandiri', 'Customer', '2346237424', 'Mandiri - Rima Arhya', 60000, '', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -226,20 +196,11 @@ CREATE TABLE `pemberitahuan` (
 CREATE TABLE `pengiriman` (
   `pengiriman_id` int(4) NOT NULL,
   `pengiriman_transaksi_id` int(4) NOT NULL,
-  `pengiriman_transaksi_kode` varchar(15) NOT NULL,
   `pengiriman_nama` varchar(40) NOT NULL,
   `pengiriman_kode` varchar(30) NOT NULL,
   `pengiriman_tanggal` date NOT NULL,
   `pengiriman_status` int(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `pengiriman`
---
-
-INSERT INTO `pengiriman` (`pengiriman_id`, `pengiriman_transaksi_id`, `pengiriman_transaksi_kode`, `pengiriman_nama`, `pengiriman_kode`, `pengiriman_tanggal`, `pengiriman_status`) VALUES
-(2, 38, 'DV9SVTJF-3', 'JNE', '32242342', '2019-06-13', 0),
-(3, 39, 'QO3MECSA-3', 'JNE', '242423424', '2019-06-13', 0);
 
 -- --------------------------------------------------------
 
@@ -267,8 +228,9 @@ CREATE TABLE `produk` (
 --
 
 INSERT INTO `produk` (`produk_id`, `produk_nama`, `produk_slug`, `produk_harga`, `produk_deskripsi`, `produk_kategori_id`, `produk_gambar`, `produk_stok`, `produk_diskon`, `produk_harga_diskon`, `produk_tanggal`, `produk_terjual`) VALUES
-(21, 'Celana Jeans Hitam Kepler', 'celana-hitam-108435', 60000, '-', 30, '1_1558417399_20190521124319_n.jpg', 12, 0, 60000, '2019-06-12 02:01:11', 0),
-(22, 'Keranjang Polkadot Multifungsi', 'asda-064859', 1231, 'sad', 30, '1_1560280077_20190612020757_n.jpg', 12, 0, 1231, '2019-06-12 02:01:12', 0);
+(18, 'Laptop Asus ROG A3 GZ-12312 Super Fast Rendered Gaming AMD 7 Serion Rager', 'laptop-asus-rog-a3-gz-12312-super-fast-rendered-gaming-amd-7-serion-rager-408351', 10000, 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod\r\n     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,\r\n     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\r\n     consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse\r\n     cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non\r\n     proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 29, '1_1558240679_20190519113759_n.png', 12, 0, 10000, '2019-05-19 04:38:00', 0),
+(19, 'Laptop Lenovo Thin Pad AMD Radeon Graphics Inter Core i-3 Inside', 'laptop-lenovo-thin-pad-amd-radeon-graphics-inter-core-i-3-inside-517063', 1000000, '-', 29, '1_1558240829_20190519114029_n.png', 12, 0, 1000000, '2019-05-19 04:40:30', 0),
+(20, 'Produk Dari Admin Dijamin Mulus', 'produk-dari-admin-dijamin-mulus-978065', 10000, '-', 29, '1_1558292892_20190520020812_n.jpg', 12, 10, 9000, '2019-05-19 19:08:12', 0);
 
 -- --------------------------------------------------------
 
@@ -368,13 +330,8 @@ CREATE TABLE `transaksi` (
 --
 
 INSERT INTO `transaksi` (`transaksi_id`, `transaksi_keranjang_customer_id`, `transaksi_keranjang_kode`, `transaksi_total`, `transaksi_kode`, `transaksi_tanggal`, `transaksi_status`, `transaksi_selesai`, `transaksi_nama`, `transaksi_email`, `transaksi_alamat`, `transaksi_kecamatan`, `transaksi_kabupaten_kota`, `transaksi_provinsi`, `transaksi_kode_pos`, `transaksi_no_hp`) VALUES
-(33, 3, 'jhCKIQ', 61231, 'AWOTR4UL-3', '2019-06-12 20:01:34', 1, 1, 'Customer', 'customer@gmail.com', 'Medan', 'Medan', 'asd', 'asda', '32834', '08566298835'),
-(34, 3, 'kI59uz', 60000, 'CHXJCDGK-3', '2019-06-12 20:05:06', 1, 1, 'Customer', 'customer@gmail.com', 'Medan', 'Medan', 'asd', 'asda', '32834', '08566298835'),
-(35, 3, 'G6YyUD', 1231, 'PYE7A3PW-3', '2019-06-12 20:05:47', 1, 1, 'Customer', 'customer@gmail.com', 'Medan', 'Medan', 'asd', 'asda', '32834', '08566298835'),
-(36, 3, 'RU0Awl', 1231, 'WSBJKZIR-3', '2019-06-12 20:08:43', 1, 1, 'Customer', 'customer@gmail.com', 'Medan', 'Medan', 'asd', 'asda', '32834', '08566298835'),
-(37, 3, '31ZXzQ', 1231, 'DWJGBWYQ-3', '2019-06-12 22:35:08', 1, 1, 'Customer', 'customer@gmail.com', 'Medan', 'Medan Kota', 'Kota Medan', 'SUMUT', '20212', '08566298835'),
-(38, 3, 'YigeAE', 60000, 'DV9SVTJF-3', '2019-06-12 23:20:08', 1, 1, 'Customer', 'customer@gmail.com', 'Jalan Laksana No. 3C', 'Medan Kota', 'Kota Medan', 'Sumatera Utara', '21181', '08566298835'),
-(39, 3, '7EKqNg', 60000, 'QO3MECSA-3', '2019-06-13 06:26:24', 1, 1, 'Customer', 'customer@gmail.com', 'Medan', 'Medan', 'asd', 'asda', '32834', '08566298835');
+(22, 1, 'efHEn7', 19000, 'P8EJQDAP-1', '2019-05-20 15:20:20', 1, 0, 'Erwindo Sianipar', 'erwindoq@gmail.com', 'Jalan Laksana No.3C, Kota Matsum I', 'Medan Kota', 'Kota Medan', 'Sumatera Utara', '20215', '08566298835'),
+(23, 1, 'ecpf0K', 9000, 'K4MRVIPH-1', '2019-05-20 15:34:10', 1, 0, 'Erwindo Sianipar', 'erwindoq@gmail.com', 'HUTA AFD III, Andarasi', 'Parbalogan', 'Simalungun', 'Sumatera Utara', '21181', '082184226413');
 
 --
 -- Indexes for dumped tables
@@ -484,31 +441,31 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `carousel`
 --
 ALTER TABLE `carousel`
-  MODIFY `carousel_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `carousel_id` int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `customer_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `customer_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `kategori_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `kategori_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `keranjang`
 --
 ALTER TABLE `keranjang`
-  MODIFY `keranjang_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=93;
+  MODIFY `keranjang_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT for table `konfirmasi`
 --
 ALTER TABLE `konfirmasi`
-  MODIFY `konfirmasi_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `konfirmasi_id` int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `kontak`
@@ -526,13 +483,13 @@ ALTER TABLE `pemberitahuan`
 -- AUTO_INCREMENT for table `pengiriman`
 --
 ALTER TABLE `pengiriman`
-  MODIFY `pengiriman_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `pengiriman_id` int(4) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `produk_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `produk_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `rating`
@@ -562,7 +519,7 @@ ALTER TABLE `testimoni`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `transaksi_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `transaksi_id` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
